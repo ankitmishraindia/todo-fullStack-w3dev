@@ -1,0 +1,25 @@
+.addTodoContainer{
+    display: flex;
+    gap: 20px;
+    
+}
+.addTodoContainer input{
+    padding: 7px;
+    outline-color:blueviolet;
+    border: none;
+    border-radius: 3px;
+    font-weight: 600;
+}
+.addTodoContainer button{
+    padding:4px 15px;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0px 0px 5px white;
+    cursor: pointer;
+}
+.addTodoContainer button:hover{
+    background-color: rgb(142, 61, 218);
+    color: rgb(139, 135, 135);
+}

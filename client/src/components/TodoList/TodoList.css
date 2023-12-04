@@ -1,0 +1,47 @@
+.todoList-Container{
+    padding:10px 10px 10px 30px;
+    
+    margin-top: 20px;
+    background-color: blueviolet;
+    
+    
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.todoList-Container ol{
+    
+    color: white;
+    font-size: 20px;
+    
+}
+.todoList-Container ol li{
+    margin-top: 4px;
+}
+.todoList-Container ol li span{
+    display: flex;
+    justify-content: space-between;
+    gap:5px;
+}
+.todoList-Container ol li span button{
+    padding: 4px 10px;
+    border: none;
+    background-color: white;
+    color: blueviolet;
+    font-weight: 600;
+    cursor: pointer;
+}
+.todoList-Container ol li span p>p{
+    padding: 2px 5px;
+    border: none;
+    background-color: orange;
+    cursor: pointer;  
+    
+}
+.todoList-Container ol li span p{
+    padding: 2px 5px;
+    border: none;
+    background-color: green;
+    cursor: pointer;  
+    
+}

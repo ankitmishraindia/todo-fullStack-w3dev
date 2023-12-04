@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: rgba(0,0,250,0.8);
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  min-height: 500px;
+  
+}
+.container h1{
+  font-size: 50px;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 7px yellow;
+  text-decoration:underline;
+  text-decoration-color: blueviolet;
+}
+.container div p{
+  text-align: center;
+  color: white;
+  
+}
