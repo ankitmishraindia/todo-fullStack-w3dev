@@ -17,8 +17,7 @@ function App() {
             setTodoList(response.data)
             setDataStatus(true)
         } catch (error) {
-          console.log(error)
-          window.alert('Error:'+error.message+'. Please try again.')
+          window.alert("Please try again, Error:",error.message)
         }
         
        }
@@ -30,11 +29,12 @@ function App() {
       <div className='container'>
         <h1>TODO WEB APP</h1>
         <div>
-          <AddTodo setList={(data)=>setTodoList([
+          <AddTodo list={todoList} setList={(data)=>{
+            setTodoList([
             ...todoList,
             data
-          ])}/>
-          {(!dataStatus)?<p>Loading...</p>:(todoList.length==0)?<p>Please add todo...</p>:<TodoList list={todoList} setList={setTodoList}/>}
+          ])}}/>
+          {(!dataStatus)?<p>Loading...</p>:(todoList.length===0)?<p>Please add todo...</p>:<TodoList list={todoList} setList={setTodoList}/>}
         </div>
         
       </div>

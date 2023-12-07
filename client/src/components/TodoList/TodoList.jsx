@@ -1,4 +1,5 @@
-
+import { MdDelete } from "react-icons/md";
+import { FaCircleCheck } from "react-icons/fa6";
 import axios from 'axios';
 import './TodoList.css'
 function TodoList({list,setList}){
@@ -7,11 +8,14 @@ function TodoList({list,setList}){
     async function delTodo(id){
         try {
             const response=await axios.delete(`http://localhost:5000/todo/${id}`)
-        const newlist=list.filter((todo)=>id!==todo._id)
+            console.log(response.data)
+                const newlist=list.filter((todo)=>id!==todo._id)
         setList(newlist)
-        console.log(list)
+            
+        
+        
         } catch (error) {
-            window.alert(error.message)
+            window.alert("Please try again, Error:",error.message)
         }
         
     }
@@ -21,15 +25,16 @@ function TodoList({list,setList}){
         try {
 
             const response=await axios.put(`http://localhost:5000/todo/${id}`)
+            console.log(response.data)
         const newlist=list.map((todo)=>{
-            if(todo._id==id){
+            if(todo._id===id){
                 todo.completed=true
             }
             return todo;
         })
         setList(newlist)
         } catch (error) {
-            window.alert(error.message)
+            window.alert("Please try again, Error:",error.message)
         }
         
     }
@@ -41,8 +46,8 @@ function TodoList({list,setList}){
                    <li key={todo._id}>
                     <span>
                       {todo.task}
-                      <p onClick={()=>(!todo.completed)?statusChange(todo._id):null} title='Click to Complete'>{(todo.completed)?'Completed':<p>Pending</p>}</p>
-                      <button onClick={()=>delTodo(todo._id)}>Delete</button>
+                      <div onClick={()=>(!todo.completed)?statusChange(todo._id):null} title='Click to Complete'>{(todo.completed)?<FaCircleCheck/>:<p>Pending</p>}</div>
+                      <button onClick={()=>delTodo(todo._id)}><MdDelete/></button>
                      </span>
                      </li>)}
             </ol>

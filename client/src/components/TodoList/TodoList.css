@@ -31,17 +31,16 @@
     font-weight: 600;
     cursor: pointer;
 }
-.todoList-Container ol li span p>p{
+.todoList-Container ol li span div>p{
     padding: 2px 5px;
     border: none;
     background-color: orange;
     cursor: pointer;  
     
 }
-.todoList-Container ol li span p{
-    padding: 2px 5px;
+.todoList-Container ol li span div{
+    
     border: none;
-    background-color: green;
     cursor: pointer;  
     
 }

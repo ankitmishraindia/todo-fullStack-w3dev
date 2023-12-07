@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import config from 'config';
 
 function connect(){
-    const dbUri=config.get('dburi') as string;
+    const dbUri=config.get('mongoURI') as string;
 
     const connection=mongoose.connect(dbUri)
                              .then((data)=>{
